@@ -4,13 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VsCode</title>
+    <title>visualstudio</title>
     <link rel="stylesheet" href="indec.css">
     <!-- Font Awesome CDN to load the font awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+    <div id="particles-js"></div>
+    <!-- Load particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+    <!-- Initialize particles -->
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 60 },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.4 },
+                size: { value: 3 },
+                line_linked: {
+                    enable: true,
+                    distance: 200,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: "none",
+                    out_mode: "out"
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" }
+                },
+                modes: {
+                    repulse: { distance: 100 },
+                    push: { particles_nb: 4 }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+
 
     <!-- Navigation Section -->
     <header class="navbar">
@@ -26,6 +68,7 @@
             <a href="#">Blog</a>
             <a href="#">API</a>
             <a href="#">Extensions</a>
+            <a href="#">Files</a>
         </nav>
 
         <div class="right-section">
@@ -39,15 +82,29 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-
     </header>
+    <section class="hero">
+        <p class="announcement">
+            <span>Try <strong>MCP servers</strong> to extend agent mode in VS Code!</span>
+            <i class="fa-solid fa-xmark"></i>
+        </p>
+        <h1>The <span>open</span> source<br><span>AI code editor</span></h1>
+        <div class="upper-containt">
+        <button class="hero-download-btn">Download for Windows</button>
 
+        <p class="subtext">
+            <a href="#">Web, Insiders edition, or other platforms</a><br>
+            <div class="inside-text">
+            <small>By using VS Code, you agree to the <a href="#">license</a> and <a href="#">privacy
+                    statement</a>.</small>
+                    </div>
+        </p>
+        </div>
+        <div class="screenshot">
+            <img src="image.png" alt="VS Code Screenshot">
+        </div>
 
-    <!-- <main>
-        <h1>Welcome to Visual Studio Code</h1>
-        <p>Your go-to code editor for building and debugging modern web and cloud applications.</p>
-    </main> -->
-
+    </section>
 
 
 
@@ -68,7 +125,7 @@
 
         <p class="footer-text">© Microsoft</p>
     </footer>
-    <p></p>
+    
 </body>
 
 </html>
